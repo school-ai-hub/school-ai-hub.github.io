@@ -1,4 +1,9 @@
-export const categories=[{id:'career',title:'進路・キャリア学習',sub:'自分を知り、これからを考える',icon:'compass'},{id:'event',title:'学校行事',sub:'体験と振り返りを、次の成長へ',icon:'flag'},{id:'inquiry',title:'総合・探究の学習',sub:'問いから始める、学校らしい学び',icon:'search'},{id:'passport',title:'キャリア・パスポート',sub:'目標・成長・次の一歩をつなぐ',icon:'book'}];
+export const categories = [
+  { id: 'inquiry', title: '総合・探究' },
+  { id: 'career', title: '進路・キャリア' },
+  { id: 'event', title: '学校行事' },
+  { id: 'passport', title: 'キャリア・パスポート' },
+];
 export const themes=[
 {id:'path',cat:'career',name:'進路学習',hours:5,modules:['self','work','school','compare','share','reflect']},
 {id:'work',cat:'career',name:'職業調べ',hours:5,modules:['self','work','research','compare','share','reflect']},

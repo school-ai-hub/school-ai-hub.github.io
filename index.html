@@ -28,11 +28,11 @@
     // Preserve links teachers previously shared to sections of the AI portal.
     const section = window.location.hash.slice(1).split("?")[0];
     const lessonSections = new Set([
-      "required", "courses", "library", "record", "updates", "news", "official",
+      "home", "required", "courses", "library", "intro", "cases", "news", "record", "experience",
       "basics", "information-literacy", "guidelines", "prompt-basics", "lesson-prompts",
       "work-prompts", "lesson-plans", "web-apps", "parents", "qa", "learning-main"
     ]);
-    if (lessonSections.has(section)) {
+    if (lessonSections.has(section) || /^(info|term)-/.test(section)) {
       window.location.replace("./edu-ai-teachers-portal/" + window.location.search + window.location.hash);
     }
   </script>

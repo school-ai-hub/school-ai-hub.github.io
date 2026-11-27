@@ -1,1 +1,0 @@
-window.learningCatalog={version:1,mode:'free',materials:[...['be',...Object.keys(window.GRAMMAR_LESSONS||{})].map(id=>({id:'grammar:'+id,domain:'grammar',sourceId:id})),...(window.talkCurriculum||[]).map(s=>({id:'talk:'+s.id,domain:'talk',sourceId:s.id}))],textbooks:[],unitLinks:[]};

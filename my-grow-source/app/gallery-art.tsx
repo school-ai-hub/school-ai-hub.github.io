@@ -1,0 +1,6 @@
+/** Architectural paper forms echo the steps, doors and pages of the gallery concept. */
+export function GalleryArt({variant = 0}:{variant?:number}) {
+return <svg className={'mg-gallery-art mg-gallery-art-'+variant} viewBox="0 0 320 230" fill="none" aria-hidden="true">
+{variant===0 ? <><path d="M157 198V65L265 23V191L224 209V76L191 89V211Z" fill="#151515"/><path d="M14 230 191 165 224 179 119 230Z" fill="#df5018"/><path d="M191 165V89L224 76V179Z" fill="#f4f2ed"/></> : variant===1 ? <><path d="M65 230V186L119 166V143L174 124V101L229 81V58L320 27V230Z" fill="#151515"/><path d="m65 186 54-20 48 7-53 20Zm54-43 55-19 48 7-55 19Zm55-42 55-20 48 7-55 20Zm55-43 91-31v12l-44 26Z" fill="#df5018"/></> : variant===2 ? <><path d="M164 163V38L281 0V125Z" fill="#df5018"/><path d="m45 230 71-24v-26l48-17v-28l72-25 84 28v92Z" fill="#151515"/><path d="m116 180 48-17 64 20-51 18Zm48-45 72-25 72 24-72 23Z" fill="#fff"/></> : variant===3 ? <><path d="M112 230V83L279 20V230Z" fill="#151515"/><path d="M150 230V108L250 70V230Z" fill="#df5018"/><path d="M52 230V151l145-54v133Z" fill="#fff" stroke="#151515" strokeWidth="1.5"/></> : <><path d="M0 230 320 20V146L176 230Z" fill="#df5018"/><path d="M81 230V194H135V162H189V130H243V97H320V230Z" fill="#151515"/><path d="m81 194 32-16h54l-32 16Zm54-32 32-16h54l-32 16Zm54-32 32-16h54l-32 16Zm54-33 32-16h45v16Z" fill="#fff"/></>}
+</svg>;
+}

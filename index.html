@@ -1,52 +1,68 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f8f9fb" />
-    <meta name="description" content="先生のための生成AI学習ポータル。必修学習とクイズ、授業・校務で使える実践コース、資料を掲載。" />
-    <title>Edu AI Teachers Portal</title>
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Edu AI Teachers Portal" />
-    <meta property="og:description" content="先生のための生成AI学習ポータル" />
-    <meta property="og:url" content="https://school-ai-hub.github.io/" />
-    <meta property="og:image" content="https://school-ai-hub.github.io/og.png" />
-    <meta property="og:image:width" content="1731" />
-    <meta property="og:image:height" content="909" />
-    <meta property="og:image:alt" content="Edu AI Teachers Portal 先生のための生成AI学習ポータル" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Edu AI Teachers Portal" />
-    <meta name="twitter:description" content="先生のための生成AI学習ポータル" />
-    <meta name="twitter:image" content="https://school-ai-hub.github.io/og.png" />
-    <link rel="shortcut icon" href="/favicon.ico?v=editorial-door-20261102" />
-    <link rel="icon" href="/favicon.svg?v=editorial-door-20261102" type="image/svg+xml" />
-    <link rel="icon" href="/favicon-32.png?v=editorial-door-20261102" type="image/png" sizes="32x32" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=editorial-door-20261102" sizes="180x180" />
-    <script type="module" crossorigin src="/assets/index-ae7bd0dcd377.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D-wr-Fj2.css">
-    <link rel="stylesheet" crossorigin href="/assets/index-DdPdTgU-.css">
-    <style>
-      #qa .section-title {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        align-items: start;
-      }
-      #qa .section-title .section-number { display: inline-block; justify-self: start; }
-      #qa .section-title .section-icon { grid-column: 2; grid-row: 1; }
-      #qa .section-title > div { grid-column: 1 / -1; grid-row: 2; }
-      #qa > nav, #qa > section { width: 100%; max-width: 1100px; margin-inline: auto; }
-      #qa > nav { margin-block-start: 2rem; }
-      #qa > nav button { border: 0; border-radius: 0; padding-inline: 0; text-decoration: underline; text-underline-offset: 0.2em; }
-      #qa .qa-list { max-width: none; }
-      #qa .qa-list [data-slot="accordion-trigger"] { padding-inline-start: 0; }
-      #prompt-basics > .editorial-note {
-        width: 100%;
-        max-width: 1100px;
-        margin-inline: auto;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="授業と校務に使えるWebサイトの一覧。">
+  <meta name="theme-color" content="#153665">
+  <title>School AI Hub｜授業・校務ポータル</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #172940; background: #f3f6fa; font: 1rem/1.65 system-ui, sans-serif; }
+    .wrap { max-width: 72rem; margin-inline: auto; padding-inline: clamp(1.2rem, 5vw, 4rem); }
+    header { padding-block: clamp(2.2rem, 7vw, 5rem); background: #153665; color: #fff; }
+    header p { margin: 0; color: #dbe9fb; font-size: 1.1rem; }
+    h1 { margin: 0 0 .45rem; font-size: clamp(2.5rem, 7vw, 4.25rem); line-height: 1.1; letter-spacing: -.045em; }
+    main { padding-block: clamp(1.6rem, 5vw, 3.4rem); }
+    h2 { margin: 0 0 1.2rem; font-size: 1.4rem; }
+    ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; padding: 0; margin: 0; list-style: none; }
+    li a { display: flex; flex-direction: column; height: 100%; min-height: 13rem; padding: 1.4rem; color: inherit; text-decoration: none; background: #fff; border: 1px solid #d3deeb; border-radius: 1rem; }
+    li a:hover { border-color: #2862a4; background: #f8fbff; }
+    a:focus-visible { outline: 3px solid #2862a4; outline-offset: 4px; }
+    li h3 { margin: 0; font-size: 1.3rem; line-height: 1.25; }
+    li p { margin: .65rem 0 1rem; color: #425773; }
+    .open { margin-top: auto; color: #174f91; font-weight: 650; }
+  </style>
+  <script>
+    // Preserve links teachers previously shared to sections of the AI portal.
+    const section = window.location.hash.slice(1).split("?")[0];
+    const lessonSections = new Set([
+      "required", "courses", "library", "record", "updates", "news", "official",
+      "basics", "information-literacy", "guidelines", "prompt-basics", "lesson-prompts",
+      "work-prompts", "lesson-plans", "web-apps", "parents", "qa", "learning-main"
+    ]);
+    if (lessonSections.has(section)) {
+      window.location.replace("./edu-ai-teachers-portal/" + window.location.search + window.location.hash);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>School AI Hub</h1>
+      <p>授業・校務ポータル</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <h2>サイト一覧</h2>
+    <ul>
+      <li><a href="./edu-ai-teachers-portal/">
+        <h3>Edu AI Teachers Portal</h3>
+        <p>生成AIの基本を学び、授業や校務での使い方を試す。</p>
+        <span class="open">サイトを開く <span aria-hidden="true">→</span></span>
+      </a></li>
+      <li><a href="./my-grow/">
+        <h3>My Grow</h3>
+        <p>探究学習やキャリア教育のワークシートを作る。</p>
+        <span class="open">サイトを開く <span aria-hidden="true">→</span></span>
+      </a></li>
+      <li><a href="./english-arcade/">
+        <h3>English Arcade</h3>
+        <p>英単語や英語表現をゲームで練習する。</p>
+        <span class="open">サイトを開く <span aria-hidden="true">→</span></span>
+      </a></li>
+    </ul>
+  </main>
+</body>
 </html>

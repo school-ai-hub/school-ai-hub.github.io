@@ -1,0 +1,21 @@
+/* The same down-facing idle frame used by the game engines.
+   Hero: [67,61,226,309], companion: [75,49,248,324], sheet: 1086×1448.
+   Crop in CSS so the source sprite, outfit and palette remain identical. */
+.hero-portrait,.companion-portrait{position:relative;overflow:hidden;isolation:isolate;background:#183d4e;--sprite-height:62px;image-rendering:pixelated}
+.hero-portrait:before,.companion-portrait:before{content:'';position:absolute;pointer-events:none;background-repeat:no-repeat;background-size:100% 100%;image-rendering:pixelated}
+.hero-portrait:before{width:calc(var(--sprite-height)*3.514563107);height:calc(var(--sprite-height)*4.686084142);left:calc(50% - var(--sprite-height)*.582524272);top:calc(var(--sprite-height)*-.197411003);background-image:url('assets/hero-directions-v4.webp?rev=world4')}
+.companion-portrait:before{width:calc(var(--sprite-height)*3.351851852);height:calc(var(--sprite-height)*4.469135802);left:calc(50% - var(--sprite-height)*.614197531);top:calc(var(--sprite-height)*-.151234568);background-image:url('assets/companion-directions-v5.webp?rev=world4')}
+.hub-portrait.hero-portrait{background-image:none}
+.rpg-portrait.hero-portrait,.rpg-portrait.companion-portrait{--sprite-height:64px}
+body.adventure-mode .rpg-portrait.hero-portrait,body.adventure-mode .rpg-portrait.companion-portrait{--sprite-height:44px}
+body.adventure-mode :is(#adventureEvent,#adventureJournalPanel)>.rpg-portrait:is(.hero-portrait,.companion-portrait){position:relative}
+.home-protagonist.hero-portrait{--sprite-height:clamp(130px,17vw,210px);position:absolute;width:var(--sprite-height);height:var(--sprite-height);right:12%;bottom:26px;background:transparent;pointer-events:none;filter:drop-shadow(0 8px 3px #06172770)}
+@media(max-width:650px){.hub-portrait.hero-portrait,.rpg-portrait.hero-portrait,.rpg-portrait.companion-portrait{--sprite-height:48px}.home-protagonist.hero-portrait{--sprite-height:96px;right:20px;bottom:16px}}
+
+/* Keep the airship, clock tower and foreground hill in the banner crop. */
+.adventure-hero{min-height:clamp(500px,50vw,614px)}
+.rpg-hero-background{object-position:center 30%;image-rendering:pixelated}
+.home-protagonist.hero-portrait{--sprite-height:clamp(130px,14vw,172px);right:15%;bottom:26px}
+/* Up-facing idle frame [82,1093,198,308] from the SAME hero atlas. */
+.home-protagonist.hero-portrait:before{width:calc(var(--sprite-height)*3.525974026);height:calc(var(--sprite-height)*4.701298701);left:calc(50% - var(--sprite-height)*.587662338);top:calc(var(--sprite-height)*-3.548701299)}
+@media(max-width:650px){.adventure-hero{min-height:580px}.rpg-hero-background{object-position:90% center}.home-protagonist.hero-portrait{--sprite-height:120px;right:12%;bottom:18px}}

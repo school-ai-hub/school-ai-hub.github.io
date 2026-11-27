@@ -1,0 +1,182 @@
+/* Shared spacing, loaded last on both learning surfaces. */
+:root{--layout-page-space:clamp(16px,2.5vw,32px);--layout-panel-space:24px;--layout-section-gap:24px;--layout-control-gap:10px}
+body:not(.learning-fullscreen):not(.rp-fullscreen):not(.lp-presenting):not(.lp-mode) .shell>main{width:100%;max-width:1320px;padding:var(--layout-page-space) var(--layout-page-space) 40px}
+.shell>main>h1{margin-top:0}.shell>main>.eyebrow:first-child{margin-top:0}
+main>.grid,main>.integration-menu,main>.topic-grid{gap:20px}
+main>.card:not(.lesson-presentation):not(.rp-presentation),.lp-build>.card,.lp-build>div>.card{padding:var(--layout-panel-space)}
+main>.hero{padding-block:24px 8px}
+main:has(>.hero){display:grid;align-content:start;row-gap:var(--layout-section-gap)}
+main:has(>.hero)>.hero,main:has(>.hero)>.learner-panel,main:has(>.hero)>.lp-student-entry{width:100%;max-width:none;margin:0}
+main:has(>.hero)>.learner-panel{padding:var(--layout-panel-space)}
+main:has(>.hero) .hero .eyebrow{margin-bottom:12px}
+main:has(>.hero) .hero h1{margin-bottom:16px}
+main:has(>.hero)>.lp-student-entry{align-items:stretch}
+.lp-student-entry>.card{display:flex;flex-direction:column;gap:12px;padding:24px}
+.lp-student-entry>.card :is(h2,p){margin:0}
+.lp-student-entry>.card .arrow{margin-top:auto;padding-top:4px}
+.actions{gap:var(--layout-control-gap)}
+.actions>*{min-width:0;max-width:100%}
+.actions>.btn,.actions>button{margin-block:0}
+.formgrid{gap:20px;margin-block:20px}
+.formgrid>label{min-width:0}
+.formgrid .field{margin-bottom:0}
+.tabs{gap:8px;row-gap:10px;margin-block:20px}
+main :is(.record-table,.teacher-section .record-table){width:100%}
+.table-scroll{min-width:0;max-width:100%;margin-block:12px}
+.lp-heading{margin-bottom:24px;align-items:flex-start}
+.lp-heading h1{margin:4px 0 12px}
+.lp-heading p:last-child{margin-bottom:0}
+.lp-heading .tag{margin:4px 0 0;flex-shrink:0}
+.lp-planner,.lp-lesson-schedule,.lp-picker{margin-block:0 24px}
+.lp-picker{grid-template-columns:minmax(0,1fr) 120px minmax(0,1.5fr);align-items:end;gap:16px}
+:is(.lp-picker,.lp-material-fields,.lp-lesson-schedule,.lp-calendar-heading,.lp-saved-lesson form) label{display:grid;gap:6px;margin:0;min-width:0;font-size:14px}
+:is(.lp-picker,.lp-material-fields,.lp-lesson-schedule,.lp-calendar-heading,.lp-saved-lesson form) .field{margin:0;width:100%;min-width:0}
+.lp-lesson-schedule>.actions{margin:16px 0 0;align-items:end}
+.lp-lesson-schedule>.actions>label:first-child{flex:1 1 220px;max-width:420px}
+.lp-lesson-schedule>.actions>label:last-child{flex:0 1 120px}
+.lp-build{grid-template-columns:minmax(0,1fr) 290px;gap:24px}
+.lp-build>div,.lp-build>section{min-width:0}
+.lp-build>div>h2{margin:0 0 16px}
+.lp-cards{margin:0 0 24px;gap:12px}
+.lp-card{grid-template-columns:24px minmax(0,1fr) 18px;min-height:88px;align-content:center;row-gap:4px}
+.lp-card :is(b,small){min-width:0;overflow-wrap:break-word}
+.lp-material-fields{gap:16px;margin:16px 0 20px;align-items:start}
+.lp-build>div>.card>h2{margin-bottom:12px}
+.lp-build>div>.card>p{margin-top:0}
+.lp-build>div>.card>label{display:grid;gap:6px;margin:20px 0 0}
+.lp-build>div>.card>label>.field{margin:0}
+.lp-build>div>.card>#lp-regoal{margin-top:12px}
+.lp-outline{max-height:calc(100dvh - 40px);overflow:auto}
+.lp-outline>h2{margin:0 0 8px}
+.lp-outline>p{margin:0 0 16px}
+.lp-outline ol{margin:12px 0;padding:0}
+.lp-outline li{gap:8px;padding:10px;margin:8px 0}
+.lp-outline li>span{min-width:0;line-height:1.6}
+.lp-outline li>div{flex:0 0 auto}
+.lp-fixed{gap:8px;padding-block:12px}
+.lp-stack{gap:10px;margin-top:20px}
+#lp-status:empty,#lp-participants:empty,.lp-record p:empty{display:none}
+.lp-calendar-heading{gap:16px;align-items:center;flex-wrap:wrap}
+.lp-calendar-heading>.actions{margin:0;gap:8px;align-items:end}
+.lp-calendar-heading label{grid-template-columns:auto minmax(130px,1fr);align-items:center;gap:8px}
+.lp-calendar-heading .field{min-height:44px;padding-block:8px}
+.lp-calendar-day{min-height:88px;vertical-align:top}
+.lp-planner>h3{margin:20px 0 8px}
+.lp-planner>h3+p{margin:0 0 16px}
+.lp-saved-lesson{padding-block:16px}
+.lp-saved-lesson>.actions{margin:12px 0 0}
+.lp-saved-lesson form.actions{display:grid;grid-template-columns:minmax(150px,1fr) minmax(140px,1fr) 90px auto;align-items:end;margin:12px 0 0;gap:12px}
+.lp-saved-lesson form.actions .btn{min-height:48px}
+.lp-teacher-gate{width:100%;margin:24px auto}
+.lp-teacher-gate>.btn{margin:4px 8px 4px 0}
+.lp-paper{width:100%;max-width:850px;margin:24px auto}
+.lp-paper>h1:first-child{margin-top:0}
+.lp-paper>h2{margin-top:24px}
+.lp-record:first-of-type{margin-top:12px}
+.lp-record h3{margin:8px 0}
+.lp-record p{margin:8px 0}
+.lp-record>a{display:inline-block;margin-top:8px}
+body.lp-presenting .lp-player{align-items:start;min-height:calc(100dvh - 40px)}
+body.lp-presenting .lp-stage{min-height:calc(100dvh - 40px);padding:clamp(20px,2.5vw,36px)}
+.lp-stage>h1{margin:20px 0 0}
+.lp-stage>.lp-slidebody{margin:20px 0;min-height:0;flex:0 0 auto}
+.lp-stage>.lp-controls{margin-top:auto;padding-top:20px}
+.lp-stage>.lp-resource>p{margin:12px 0 0;font-size:13px;line-height:1.7}
+.lp-stage>.lp-resource>.btn{margin:4px 8px 4px 0}
+.lp-stage:has(.lp-embedded)>.lp-slidebody{font-size:18px;line-height:1.7;margin:16px 0}
+.lp-stage:has(.lp-embedded)>h1{font-size:clamp(24px,2.5vw,34px)}
+.lp-embedded{height:clamp(320px,calc(100dvh - 280px),760px);margin-top:16px}
+.lp-flow ol{padding:0;margin:16px 0}
+.lp-flow li{margin:4px 0}
+.lp-flow li button{margin:0;padding:10px 8px}
+.lp-flow>#lp-connection{margin-block:12px}
+.lp-reflection label,#lp-goal-workshop label{display:grid;gap:8px;margin:16px 0}
+.lp-reflection label>.field,#lp-goal-workshop label>.field{margin:0}
+.lp-reflection .actions{margin:20px 0 12px}
+.teacher-topbar{flex-wrap:wrap;gap:16px;margin-bottom:24px}
+.teacher-section{margin-block:24px;padding:24px}
+.teacher-filters{align-items:end;gap:16px}
+.teacher-section>.sectionhead{gap:16px;flex-wrap:wrap}
+@media(max-width:1180px) and (min-width:761px){
+ .lp-build{grid-template-columns:minmax(0,1fr)}
+ .lp-outline{position:static;max-height:none;overflow:visible}
+ .lp-picker{grid-template-columns:minmax(0,1fr) 120px}
+ .lp-picker>label:last-child{grid-column:1/-1}
+ .lp-material-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+ :root{--layout-page-space:18px;--layout-panel-space:20px;--layout-section-gap:20px}
+ body:not(.learning-fullscreen):not(.rp-fullscreen):not(.lp-presenting):not(.lp-mode) .shell>main{padding-bottom:32px}
+ main:has(>.hero)>.hero{padding-block:16px 4px}
+ main>.grid,main>.integration-menu,main>.topic-grid{gap:16px}
+ .lp-heading{margin-bottom:20px}
+ .lp-heading .tag{margin-top:12px}
+ .lp-planner,.lp-picker,.lp-lesson-schedule{margin-bottom:20px}
+ .lp-planner{padding:16px!important}
+ .lp-calendar-heading{display:flex;gap:12px}
+ .lp-calendar-heading>.actions{width:100%;margin:0;gap:8px}
+ .lp-calendar-heading label{flex:1 1 100%;grid-template-columns:auto minmax(0,1fr)}
+ .lp-calendar-heading .field{min-width:0}
+ .lp-calendar-week{margin-top:16px}
+ .lp-calendar-day{min-height:66px;padding:6px}
+ .lp-calendar-day small{display:none}
+ .lp-calendar-day[data-count]:not([data-count="0"])::after{content:attr(data-count) '件';display:block;margin-top:8px;font-size:11px;color:#535c49}
+ .lp-build{grid-template-columns:minmax(0,1fr);gap:20px}
+ .lp-outline{position:static;max-height:none;overflow:visible}
+ .lp-material-fields{grid-template-columns:1fr;gap:16px}
+ .lp-picker{grid-template-columns:minmax(0,1fr) 100px;gap:16px}
+ .lp-picker>label:last-child{grid-column:1/-1}
+ .lp-saved-lesson form.actions{grid-template-columns:minmax(0,1fr) 100px}
+ .lp-saved-lesson form.actions>label:first-child{grid-column:1/-1}
+ .lp-saved-lesson form.actions>.btn{grid-column:1/-1}
+ .lp-paper{padding:20px;margin-block:20px}
+ body.lp-presenting .lp-player{min-height:0;gap:12px}
+ body.lp-presenting .lp-stage{min-height:0;padding:20px}
+ .lp-stage>.lp-controls{margin-top:16px;padding-top:16px;gap:8px}
+ .lp-stage>.lp-controls>.btn{padding:10px 12px}
+ .lp-stage>.lp-slidebody{margin-block:16px;font-size:22px}
+ .lp-stage>.lp-resource>.btn{display:block;width:100%;margin:8px 0 0}
+ .lp-embedded{height:60dvh;min-height:300px}
+ .teacher-section{padding:20px;margin-block:20px}
+ .teacher-topbar{align-items:flex-start}
+}
+@media(max-width:480px){
+ :root{--layout-page-space:14px;--layout-panel-space:16px}
+ .lp-cards{grid-template-columns:minmax(0,1fr);gap:10px}
+ .lp-card{min-height:76px;padding:14px!important}
+ .lp-heading h1{font-size:28px}
+ .lp-calendar-day{min-height:60px;padding:5px}
+ .lp-calendar-heading h2{font-size:22px}
+ .lp-student-entry>.card{padding:20px}
+ .lp-lesson-schedule>.actions{display:grid;grid-template-columns:minmax(0,1fr) 90px;width:100%;gap:12px}
+ .lp-lesson-schedule>.actions>label{max-width:none}
+ .lp-teacher-gate>.btn{display:block;width:100%;margin:10px 0 0}
+}
+@media print{
+ body:not(.learning-fullscreen):not(.rp-fullscreen):not(.lp-presenting):not(.lp-mode) .shell>main{max-width:none;padding:0}
+ .lp-outline{position:static;max-height:none;overflow:visible}
+ .lp-paper{margin:0;max-width:none}
+}
+/* Records are one page flow: heading, lesson records, then practice history. */
+.learning-records-page{display:flex;flex-direction:column;align-items:stretch;gap:20px;width:100%;min-width:0}
+.records-page-heading .eyebrow{margin:0 0 8px}.records-page-heading h1{margin:0 0 12px}.records-page-heading>p:last-child{margin:0}
+#lp-record-sections{display:flex;flex-direction:column;gap:20px;min-width:0}#lp-record-sections:empty{display:none}
+.learning-records-page :is(#lp-attendance-records,#lp-records,.records-practice){padding:24px;margin:0;width:100%;min-width:0}
+.learning-records-page .card>h2{margin:0 0 12px;font-size:21px}
+.learning-records-page .card>p{margin:0;line-height:1.7}
+.learning-records-page .lp-record{margin:0;padding:16px 0}
+.learning-records-page .lp-record:first-of-type{margin-top:4px}
+.learning-records-page .lp-record:last-child{padding-bottom:0}
+.learning-records-page .lp-record>p{margin:6px 0}
+.learning-records-page .lp-record>h3{margin:6px 0 10px;font-size:17px}
+.record-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;margin:0 0 20px;padding:0}
+.record-links>a{display:flex;align-items:center;min-height:44px;margin:0;padding:8px 12px;border:1px solid var(--line);border-radius:8px;line-height:1.5;font-size:14px;background:#f8fafc}
+.record-links>a:hover{background:#f3f5ed}
+.records-filter{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:0 0 16px}
+.records-filter>label{margin:0;line-height:1.6;font-size:14px}
+.records-filter>.field{width:200px;max-width:100%;margin:0;min-height:44px;padding:8px 12px}
+#unified-records{min-width:0}#unified-records>.table-scroll{margin:0}#unified-records>p{margin:0}
+.records-legacy-link{align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;margin:0;padding:0;font-size:13px;color:var(--muted)}
+@media(max-width:760px){.learning-records-page,#lp-record-sections{gap:16px}.learning-records-page :is(#lp-attendance-records,#lp-records,.records-practice){padding:20px}.record-links{gap:8px;margin-bottom:16px}.records-filter{margin-bottom:12px}.learning-records-page .card>h2{font-size:20px}}
+@media(max-width:480px){.learning-records-page :is(#lp-attendance-records,#lp-records,.records-practice){padding:16px}.record-links{grid-template-columns:minmax(0,1fr)}.records-filter{display:grid;grid-template-columns:minmax(0,1fr);gap:6px}.records-filter>.field{width:100%}}
+.lp-delete-lesson{color:#9f3535;border-color:#c99595;background:#fff}.lp-delete-lesson:hover{background:#fff4f4}.lp-deleted-lessons{margin-top:20px;border-top:1px solid var(--line);padding-top:16px}.lp-deleted-lessons>summary{cursor:pointer;font-size:14px}.lp-deleted-lessons>p{margin:12px 0 0;font-size:13px}.lp-deleted-lessons .lp-saved-lesson:first-of-type{margin-top:12px}#lp-calendar-status:empty{display:none}

@@ -1,0 +1,91 @@
+/* White + blue: the shared, final visual layer. Preserve learning layout and state. */
+:root{--ink:#4c611d;--muted:#535c49;--paper:#ffffff;--line:#dfe7ce;--green:#4c611d;--mint:#f3f5ed;--focus-primary:#4c611d;--focus-primary-hover:#4c611d;--focus-border:#535c49;--layout-section-gap:24px}
+body,.shell,.shell:has(main>.hero){background:#fff;color:var(--ink)}
+.shell:has(main>.hero)::before,.shell:has(main>.hero)::after{display:none}
+body>aside{background:#fff;color:var(--ink);border-color:var(--line);padding:26px 18px}
+body>aside .brand{display:grid;grid-template-columns:38px minmax(0,1fr);align-items:center;gap:4px 10px;line-height:1.3}
+body>aside .brand .logo{grid-row:1/3;width:38px;height:38px;min-width:38px;margin:0;border-radius:10px;background:transparent}
+body>aside .brand .logo img{display:block;width:100%;height:100%}
+body>aside .brand .brand-name{font-size:21px;color:var(--ink);letter-spacing:-.5px;white-space:nowrap}
+body>aside .brand small{color:var(--muted);font-size:10px;letter-spacing:0}
+body>aside .navlabel{color:var(--muted);margin:32px 12px 12px;font-size:10px}
+body>aside nav a{color:var(--muted);border:1px solid transparent;border-radius:8px;min-height:48px;margin:5px 0;padding:12px;gap:10px;font-weight:500;box-shadow:none}
+body>aside nav a:hover{background:#f8fafc;color:var(--ink)}
+body>aside nav a.active{color:#4c611d;background:#f3f5ed;border-color:transparent;font-weight:700}
+body>aside nav .related-site-link{font-size:13px}
+body>aside nav .related-site-link .external-arrow{color:var(--muted)}
+body>aside .aside-note{background:#fff;border:0;border-top:1px solid var(--line);border-radius:0;padding:18px 4px 0;color:var(--muted)}
+body>aside .aside-note>b,body>aside .aside-note>p{display:none}
+body>aside .aside-note span,body>aside .aside-note .teacher-entry{color:var(--muted)}
+body>aside .aside-note .teacher-entry:hover{background:var(--mint);color:#4c611d}
+body>aside a:focus-visible{outline-color:var(--focus-primary)}
+.shell>header{height:64px;background:#fff;border-color:var(--line);padding-inline:var(--layout-page-space);color:var(--muted)}
+.shell>header .pill{background:#f8fafc;border-color:var(--line);color:var(--muted)}
+.shell>footer{background:#fff;border-color:var(--line)}
+main>.hero{display:block;padding:8px 0 0;border:0;background:#fff;border-radius:0;box-shadow:none;overflow:visible}
+main>.hero h1{font-size:clamp(28px,3vw,38px);line-height:1.4;letter-spacing:-.03em;margin:0 0 8px}
+main>.hero p:last-child{font-size:15px;line-height:1.7;color:var(--muted);margin:0}
+.card,.integration-menu .card,main>.learner-panel{background:#fff;border-color:var(--line);border-radius:10px;box-shadow:none}
+.card.link:hover,.integration-menu .card:hover{box-shadow:none;transform:none;border-color:#a9b58e;background:#fbfdff}
+main>.learner-panel{margin:0;padding:24px}
+.learner-panel h2{font-size:19px;margin-bottom:14px}
+.learner-panel details{margin-top:12px}
+.id-entry .field,.id-entry .btn{min-height:46px}
+.lp-student-entry>.card{display:grid;grid-template-columns:44px minmax(0,1fr);gap:6px 16px;align-content:start}
+.lp-student-entry>.card .icon{grid-column:1;grid-row:1/4;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#f3f5ed;color:#4c611d;border:0;box-shadow:none}
+.lp-student-entry>.card :is(h2,p,.arrow){grid-column:2}
+.lp-student-entry>.card h2{font-size:20px}
+.lp-student-entry>.card p{font-size:14px;line-height:1.7;color:var(--muted)}
+.lp-student-entry>.card .arrow{font-size:13px;color:#4c611d}
+.us-student-calendar{margin:0;background:#fff}
+.us-student-calendar h2{font-size:24px;letter-spacing:-.02em}
+.us-student-calendar .eyebrow{display:none}
+.us-lesson-list{margin-top:20px}
+.us-lesson-list article{background:#fff;border:1px solid var(--line);border-radius:9px;padding:22px 24px}
+.us-lesson-list article>div>b{display:inline-block;color:#4c611d;background:#f3f5ed;border-radius:6px;padding:4px 10px;font-size:13px;font-weight:700}
+.us-lesson-list h3{font-size:22px;margin:14px 0 8px;line-height:1.5}
+.us-lesson-list article>.btn{flex-shrink:0}
+.btn,.field,.tabs a,.option{border-radius:8px;box-shadow:none}
+.btn{min-height:44px;font-weight:600}
+.btn.primary{background:#4c611d;border-color:#4c611d;color:#fff}
+.btn.primary:hover{background:#4c611d;border-color:#4c611d}
+.tag,.badge{background:#f3f5ed;color:#4c611d;border-color:#dfe7ce}
+.lp-card,.lp-outline,.lp-planner,.textbook-picker,.teacher-section{box-shadow:none;border-color:var(--line);background:#fff}
+.lp-card.selected,.lp-card.on{background:#f3f5ed;border-color:#4c611d}
+.lp-outline{background:#f8fafc}
+.record-links>a,.record-table th{background:#f8fafc}
+/* Retain the viewport grid and fixed header/footer dimensions at every activity. */
+.us-presenting .us-shell{background:#fff}
+.us-presenting .us-flow{background:#fff;border-color:var(--line);border-radius:9px}
+.us-flow nav button{color:var(--muted);min-height:40px;padding:10px;font-size:14px}
+.us-flow nav button:hover:not(:disabled){background:#f8fafc}
+.us-flow nav button.current,.us-flow nav button.current:hover{background:#f3f5ed;color:#4c611d;font-weight:700}
+.us-presenting .us-stage{border-color:var(--line);border-radius:9px;background:#fff}
+.us-presenting .us-header,.us-presenting .us-controls{background:#fff;border-color:var(--line)}
+.us-grammar-example{background:#fff;border:0;border-radius:0;text-align:center;padding:16px}
+.us-grammar-example .us-block-label{color:var(--muted);font-weight:500}
+.us-content .us-grammar-en{font-weight:650;color:#4c611d}
+.us-grammar-focus{color:#4c611d;background:transparent;border-bottom-color:#4c611d;border-radius:0;padding:0 .03em;font-weight:800}
+.us-content .us-grammar-ja{color:#535c49;margin-top:16px}
+.us-grammar-parts>span{background:#fff;border-color:var(--line);color:var(--muted)}
+.us-grammar-note{background:#f3f5ed;border:0;border-radius:9px;padding:20px 24px}
+.us-grammar-note h2,.us-grammar-summary h2{color:#4c611d}
+.us-grammar-note p{color:var(--ink);text-wrap:balance}
+.us-question .us-prompt{background:#f8fafc;border-color:var(--line)}
+.us-content .us-writing-question .us-response{border-color:var(--line);background:#fff}
+.us-options button{background:#fff;border-color:#a9b58e}
+.us-options button:hover{background:#f3f5ed;border-color:#4c611d}
+.lesson-controls,.rp-controls,body.learning-fullscreen #slidebox>.lesson-controls{background:#fff;border-color:var(--line)}
+@media(max-width:1100px) and (min-width:761px){body>aside{padding-inline:14px}body>aside .brand .brand-name{font-size:19px}body>aside nav a{padding-inline:10px;font-size:13px}}
+@media(max-width:760px){body>aside{padding:16px;border-color:var(--line)}body>aside .brand{max-width:240px}body>aside nav a{margin:0;min-height:44px;padding:9px 11px}body>aside nav .related-site-link{border-left-color:var(--line)}.shell>header{height:52px}.lp-student-entry>.card{padding:20px;column-gap:12px}.lp-student-entry>.card h2{font-size:19px}.us-flow nav button{min-height:32px;font-size:12px;padding:6px 9px}.us-lesson-list article{padding:18px}.us-lesson-list h3{font-size:20px}.us-grammar-example{padding:10px}.us-grammar-note{padding:14px 16px}}
+@media(max-height:500px){.us-grammar-example{padding:4px}.us-grammar-note{padding:10px 14px}}
+@media print{body,.shell{background:#fff}.btn{box-shadow:none}}
+
+/* Sidebar and content fill the viewport; glossary belongs to sidebar. */
+body>.shell{min-height:100dvh}
+body>.shell>main#app{max-width:none;width:100%;min-height:100dvh}
+body>aside{overflow-y:auto;overscroll-behavior:contain}
+body>aside>.word-help-launcher{position:static!important;inset:auto!important;z-index:auto;flex-shrink:0;display:block;width:100%;margin:16px 0 0;box-shadow:none;border-radius:8px;text-align:left;padding:12px;font-size:14px;min-height:46px}
+body>aside>.aside-note{flex-shrink:0}
+.integrated-game-mode .integrated-game iframe{height:calc(100dvh - 90px)}
+@media(max-width:760px){body>.shell>main#app{min-height:calc(100dvh - 160px)}body>aside>.word-help-launcher{width:auto;align-self:flex-start;margin-top:12px}.integrated-game-mode .integrated-game iframe{height:calc(100dvh - 160px)}}
